@@ -32,6 +32,8 @@ st.markdown("""
 with st.sidebar:
     st.title("✈️ Booking NLP")
     st.caption("NLP Lab 6 · Faculty of Engineering · BAU")
+    st.markdown("📘 Activities: **Lab 6 notebook, Part 8**  \n"
+                "💻 [Source code on GitHub](https://github.com/ayayaman/Booking)")
     st.markdown("""
 **Pipeline**
 1. **CKY** finds the most probable grammar tree
@@ -343,7 +345,8 @@ with tab3:
                 st.markdown(f"**Step {i}** — kept {len(kept)}: " +
                             " · ".join(f"`{h or '∅'}` ({sc:.1f})" for h, sc, _ in kept))
         st.info("Try it: set **λ = 0** → fluency is ignored, and *for paris* ties with *to paris*. "
-                "Set **reorder = 0.1** → the literal *flight direct* wins, just like ‘The cat black’ on slide 42.")
+                "Then also set **reorder = 0.1** → the literal *flight direct* wins, just like ‘The cat black’ on slide 42. "
+                "On the Londres example, try **K = 1** to see a search error.")
 
 # =====================================================================
 # TAB 4 — BLEU
